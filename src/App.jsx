@@ -1,6 +1,6 @@
 import { useState } from 'react';
 import './style/style.css';
-import Divider from './components/divider';
+import Divider from './components/Divider';
 import Skill1 from './components/Skill1';
 import Skill2 from './components/Skill2';
 import Skill3 from './components/Skill3';
