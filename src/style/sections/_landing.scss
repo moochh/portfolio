@@ -1,0 +1,29 @@
+section.landing {
+	position: relative;
+	padding: 0;
+
+	.content {
+		margin: 220px 160px;
+
+		.inline {
+			text-align: center;
+
+			h1 {
+				display: inline;
+
+				&.highlight {
+					color: var(--primary);
+					padding: 0 1rem;
+				}
+			}
+		}
+	}
+
+	img {
+		position: absolute;
+		width: 100%;
+		margin-top: 28px;
+		opacity: 0.5;
+		pointer-events: none;
+	}
+}

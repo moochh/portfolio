@@ -1,0 +1,46 @@
+section.about {
+	margin-top: 48px;
+
+	.content {
+		display: flex;
+		gap: 64px;
+
+		& > * {
+			flex: 1;
+		}
+
+		.illustration {
+			position: relative;
+
+			.card {
+				width: 100%;
+				height: 100%;
+				background-color: var(--card-bg);
+				border: 1px solid var(--border);
+				border-radius: var(--card-corner);
+			}
+
+			img {
+				position: absolute;
+				height: calc(100% + 100px);
+				bottom: 0;
+				left: 30%;
+			}
+		}
+
+		.message {
+			h6 {
+				text-transform: uppercase;
+				color: var(--primary);
+				font-size: 16px;
+				font-family: 'regular';
+			}
+
+			p {
+				margin-top: 32px;
+				font-size: 24px;
+				font-family: 'medium';
+			}
+		}
+	}
+}

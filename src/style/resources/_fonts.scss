@@ -1,0 +1,34 @@
+@font-face {
+	font-family: 'regular';
+	src: url('./resources/funnel_display.ttf');
+	font-weight: 400;
+}
+
+@font-face {
+	font-family: 'medium';
+	src: url('./resources/funnel_display.ttf');
+	font-weight: 500;
+}
+
+@font-face {
+	font-family: 'semibold';
+	src: url('./resources/funnel_display.ttf');
+	font-weight: 600;
+}
+
+@font-face {
+	font-family: 'bold';
+	src: url('./resources/funnel_display.ttf');
+	font-weight: 700;
+}
+
+@font-face {
+	font-family: 'extrabold';
+	src: url('./resources/funnel_display.ttf');
+	font-weight: 800;
+}
+
+:root {
+	font-family: 'regular';
+	font-size: var(--font-size);
+}

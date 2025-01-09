@@ -1,0 +1,210 @@
+section.skills {
+	.content {
+		h5 {
+			font-family: 'medium';
+			font-size: 20px;
+
+			&.technical-header {
+				text-align: center;
+			}
+		}
+
+		.technical {
+			width: 100%;
+
+			.container {
+				width: 100%;
+				display: flex;
+				gap: 28px;
+				margin-top: 28px;
+				position: relative;
+				z-index: 1;
+
+				.card {
+					flex: 1;
+					border-radius: var(--card-corner);
+					background: var(--card-gradient);
+					background-color: white;
+					position: relative;
+					height: 400px;
+					display: flex;
+					padding: var(--card-padding);
+					cursor: pointer;
+
+					&::before {
+						--size: -1px;
+
+						content: '';
+						position: absolute;
+						top: var(--size);
+						left: var(--size);
+						right: var(--size);
+						bottom: var(--size);
+						background: var(--border-gradient);
+						z-index: -1;
+						border-radius: var(--card-corner);
+					}
+
+					.image {
+						position: absolute;
+						overflow: hidden;
+						width: 100%;
+						height: 100%;
+						left: 0;
+						top: 0;
+						display: flex;
+						justify-content: center;
+						align-items: center;
+						z-index: 1;
+
+						img {
+							z-index: 2;
+							position: absolute;
+
+							&.glow {
+								z-index: 1;
+								filter: blur(20px);
+								position: absolute;
+							}
+						}
+					}
+
+					h6 {
+						font-family: 'medium';
+						font-size: 16px;
+						position: absolute;
+						left: var(--card-padding);
+						top: calc(100%);
+						transform: translateY(calc(-100% - var(--card-padding)));
+						z-index: 2;
+					}
+
+					.content {
+						position: absolute;
+						z-index: 2;
+						top: 88px;
+
+						p {
+							font-family: 'medium';
+
+							span {
+								margin-right: 4px;
+								display: inline-block;
+							}
+						}
+					}
+
+					button {
+						position: absolute;
+						right: var(--card-padding);
+						top: calc(100%);
+						transform: translateY(calc(-100% - var(--card-padding)));
+						z-index: 2;
+					}
+				}
+			}
+		}
+
+		.misc {
+			margin-top: 56px;
+			display: flex;
+			justify-content: space-between;
+
+			h5 {
+				width: 40%;
+			}
+
+			p {
+				width: 27%;
+				color: var(--light-gray);
+			}
+		}
+	}
+}
+
+// SKILLS
+.skill-ui {
+	img {
+		width: 135%;
+		left: -52px;
+		top: 50%;
+		transform: translate(0, -50%);
+	}
+}
+
+.skill-web {
+	img {
+		left: 50%;
+		top: 50%;
+		width: 65%;
+		transform: translate(-50%, -50%);
+	}
+}
+
+.skill-mobile {
+	img {
+		left: 50%;
+		top: 50%;
+		width: 105%;
+		transform: translate(-55%, -50%);
+	}
+}
+
+// Hover
+.skills {
+	.technical {
+		.container {
+			.card {
+				--scale: 1.1;
+
+				&.skill-ui:hover {
+					img {
+						transform: translate(0, -50%) scale(var(--scale));
+					}
+				}
+
+				&.skill-web:hover {
+					img {
+						transform: translate(-50%, -50%) scale(var(--scale));
+					}
+				}
+
+				&.skill-mobile:hover {
+					img {
+						transform: translate(-55%, -50%) scale(var(--scale));
+					}
+				}
+			}
+		}
+	}
+}
+
+// Show
+.skills {
+	.technical {
+		.container {
+			.card {
+				&.skill-ui {
+					& * {
+						transition: all 0.5s ease-in-out;
+					}
+
+					&.show {
+						flex: 100;
+
+						h6 {
+							font-size: 24px;
+							top: var(--card-padding);
+							transform: translateY(0);
+						}
+
+						button {
+							top: var(--card-padding);
+							transform: translateY(0);
+						}
+					}
+				}
+			}
+		}
+	}
+}

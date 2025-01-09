@@ -1,0 +1,60 @@
+@import './resources/sizing';
+@import './resources/fonts';
+@import './resources/colors';
+
+* {
+	margin: 0;
+	padding: 0;
+	box-sizing: border-box;
+	transition: 0.3s ease-in-out;
+}
+
+body {
+	background-color: var(--black);
+}
+
+p,
+h1,
+h2,
+h3,
+h4,
+h5,
+h6 {
+	color: white;
+}
+
+#root {
+	width: 100vw;
+	display: flex;
+	flex-direction: column;
+	align-items: center;
+}
+
+.main {
+	width: 100vw;
+	display: flex;
+	flex-direction: column;
+	align-items: center;
+}
+
+button {
+	background: none;
+	color: inherit;
+	border: none;
+	padding: 0;
+	font: inherit;
+	cursor: pointer;
+	outline: inherit;
+}
+
+@import './utility';
+@import './components';
+
+@import './components/text';
+@import './components/button';
+
+@import './sections/landing';
+@import './sections/about';
+@import './sections/skills';
+@import './sections/contact';
+@import './sections/footer';
