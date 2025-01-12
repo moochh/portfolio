@@ -504,6 +504,9 @@ button.circle-icon svg {
   display: flex;
   justify-content: space-between;
   z-index: 5;
+  cursor: pointer;
+  -webkit-backdrop-filter: blur(24px);
+          backdrop-filter: blur(24px);
 }
 .top-nav h6 {
   font-family: "bold";
@@ -1116,20 +1119,19 @@ section.contact .content .stack {
   justify-content: center;
   align-items: center;
   position: relative;
+  z-index: 3;
 }
 section.contact .content .stack .container {
   position: absolute;
   transition-timing-function: cubic-bezier(0.8, 0.3, 0.1, 1.5);
   transition-duration: 0.5s;
+  z-index: 3;
   --card-spacing: 64px;
   --hover-spacing: 80px;
 }
 section.contact .content .stack .container:nth-child(1) {
   z-index: 1;
   transform: translateY(var(--card-spacing));
-}
-section.contact .content .stack .container:nth-child(1) .card {
-  z-index: 1;
 }
 section.contact .content .stack .container:nth-child(1):hover ~ #email-card {
   transform: translateY(calc(var(--card-spacing) * -1 - (var(--hover-spacing))));
@@ -1152,9 +1154,6 @@ section.contact .content .stack .container:nth-child(1):hover .card .label p {
 section.contact .content .stack .container:nth-child(2) {
   z-index: 2;
 }
-section.contact .content .stack .container:nth-child(2) .card {
-  z-index: 2;
-}
 section.contact .content .stack .container:nth-child(2):hover ~ #email-card {
   transform: translateY(calc(var(--card-spacing) * -1 - var(--hover-spacing)));
 }
@@ -1164,6 +1163,7 @@ section.contact .content .stack .container:nth-child(2):hover .card {
   border-color: var(--linkedin);
 }
 section.contact .content .stack .container:nth-child(2):hover .label svg {
+  transition-delay: 0s;
   fill: #073263;
 }
 section.contact .content .stack .container:nth-child(2):hover .label p {
@@ -1173,15 +1173,13 @@ section.contact .content .stack .container:nth-child(3) {
   z-index: 3;
   transform: translateY(calc(var(--card-spacing) * -1));
 }
-section.contact .content .stack .container:nth-child(3) .card {
-  z-index: 3;
-}
 section.contact .content .stack .container:nth-child(3):hover .card {
   box-shadow: 0 0 48px rgba(255, 166, 0, 0.4);
   background-color: var(--primary);
   border-color: var(--primary);
 }
 section.contact .content .stack .container:nth-child(3):hover .label svg {
+  transition-delay: 0s;
   fill: #684400;
 }
 section.contact .content .stack .container:nth-child(3):hover .label p {
@@ -1194,14 +1192,14 @@ section.contact .content .stack .container:hover .card .handle-container .handle
   color: var(--black);
 }
 section.contact .content .stack .card {
+  -webkit-backdrop-filter: blur(12px);
+          backdrop-filter: blur(12px);
   display: flex;
   flex-direction: column;
   justify-content: space-between;
   padding: calc(var(--card-padding) / 1.5) var(--card-padding);
   border-radius: var(--card-corner);
   background-color: rgba(20, 20, 20, 0.502);
-  -webkit-backdrop-filter: blur(12px);
-          backdrop-filter: blur(12px);
   border: 1px solid var(--border);
   width: 360px;
   aspect-ratio: 5/3;
@@ -1209,10 +1207,12 @@ section.contact .content .stack .card {
   cursor: pointer;
   gap: 4px;
   box-shadow: 0 20px 32px rgba(0, 0, 0, 0.5);
-  transition: all 0.3s ease-in-out;
-  position: relative;
+  transition: all 0.3s ease-in-out !important;
 }
-section.contact .content .stack .card * {
+section.contact .content .stack .card p,
+section.contact .content .stack .card h6,
+section.contact .content .stack .card svg,
+section.contact .content .stack .card div {
   transition: all 0.3s ease-in-out;
 }
 section.contact .content .stack .card .handle-container {
@@ -1224,7 +1224,6 @@ section.contact .content .stack .card .handle-container .handle {
   color: var(--light-gray);
   font-size: 20px;
   font-family: "semibold";
-  opacity: 0.3;
 }
 section.contact .content .stack .card .label {
   display: flex;
@@ -1240,9 +1239,6 @@ section.contact .content .stack .card .label p {
   text-transform: uppercase;
   font-family: "medium";
   font-size: 14px;
-}
-section.contact .content .stack .card:hover .handle {
-  opacity: 1;
 }
 
 footer {

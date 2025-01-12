@@ -9,8 +9,8 @@ const Contact = () => {
 	return (
 		<motion.section
 			className="contact"
-			initial={{ opacity: 0, filter: 'blur(24px)' }}
-			animate={isPageReady ? { opacity: 1, filter: 'blur(0)' } : {}}
+			initial={{ opacity: 0 }}
+			animate={isPageReady ? { opacity: 1 } : {}}
 			transition={{ duration: 1, ease: 'easeInOut' }}>
 			<p className="section-label" ref={sectionRefs.ContactRef}>
 				Contact

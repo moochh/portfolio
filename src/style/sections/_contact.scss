@@ -35,11 +35,13 @@ section.contact {
 			justify-content: center;
 			align-items: center;
 			position: relative;
+			z-index: 3;
 
 			.container {
 				position: absolute;
 				transition-timing-function: cubic-bezier(0.8, 0.3, 0.1, 1.5);
 				transition-duration: 0.5s;
+				z-index: 3;
 
 				--card-spacing: 64px;
 				--hover-spacing: 80px;
@@ -47,10 +49,6 @@ section.contact {
 				&:nth-child(1) {
 					z-index: 1;
 					transform: translateY(var(--card-spacing));
-
-					.card {
-						z-index: 1;
-					}
 
 					&:hover {
 						& ~ #email-card {
@@ -85,10 +83,6 @@ section.contact {
 				&:nth-child(2) {
 					z-index: 2;
 
-					.card {
-						z-index: 2;
-					}
-
 					&:hover {
 						& ~ #email-card {
 							transform: translateY(
@@ -104,6 +98,7 @@ section.contact {
 
 						.label {
 							svg {
+								transition-delay: 0s;
 								fill: #073263;
 							}
 
@@ -118,10 +113,6 @@ section.contact {
 					z-index: 3;
 					transform: translateY(calc(var(--card-spacing) * -1));
 
-					.card {
-						z-index: 3;
-					}
-
 					&:hover {
 						.card {
 							box-shadow: 0 0 48px #ffa60066;
@@ -131,6 +122,7 @@ section.contact {
 
 						.label {
 							svg {
+								transition-delay: 0s;
 								fill: #684400;
 							}
 
@@ -155,13 +147,13 @@ section.contact {
 			}
 
 			.card {
+				backdrop-filter: blur(12px);
 				display: flex;
 				flex-direction: column;
 				justify-content: space-between;
 				padding: calc(var(--card-padding) / 1.5) var(--card-padding);
 				border-radius: var(--card-corner);
 				background-color: rgba(20, 20, 20, 0.502);
-				backdrop-filter: blur(12px);
 				border: 1px solid var(--border);
 				width: 360px;
 				aspect-ratio: 5/3;
@@ -169,10 +161,12 @@ section.contact {
 				cursor: pointer;
 				gap: 4px;
 				box-shadow: 0 20px 32px rgba(0, 0, 0, 0.5);
-				transition: all 0.3s ease-in-out;
+				transition: all 0.3s ease-in-out !important;
 
-				position: relative;
-				& * {
+				p,
+				h6,
+				svg,
+				div {
 					transition: all 0.3s ease-in-out;
 				}
 
@@ -185,7 +179,6 @@ section.contact {
 						color: var(--light-gray);
 						font-size: 20px;
 						font-family: 'semibold';
-						opacity: 0.3;
 					}
 				}
 
@@ -204,12 +197,6 @@ section.contact {
 						text-transform: uppercase;
 						font-family: 'medium';
 						font-size: 14px;
-					}
-				}
-
-				&:hover {
-					.handle {
-						opacity: 1;
 					}
 				}
 			}

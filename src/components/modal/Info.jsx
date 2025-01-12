@@ -11,9 +11,7 @@ const Info = ({ project, header, children }) => {
 		once: true
 	});
 
-	useEffect(() => {
-		console.log(isInView, isReadyModal);
-	}, [isInView, isReadyModal]);
+	useEffect(() => {}, [isInView, isReadyModal]);
 
 	return (
 		<div className="info">

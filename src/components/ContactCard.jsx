@@ -2,6 +2,7 @@ import React from 'react';
 import Email from './icons/Email';
 import LinkedIn from './icons/LinkedIn';
 import Instagram from './icons/Instagram';
+import { motion } from 'motion/react';
 
 const ContactCard = ({ handle, label, url = '' }) => {
 	const renderIcon = () => {
@@ -25,7 +26,7 @@ const ContactCard = ({ handle, label, url = '' }) => {
 
 	return (
 		<div className="container" id={`${label}-card`} onClick={handleClick}>
-			<div className="card">
+			<motion.div className="card">
 				<div className="handle-container">
 					<h6 className="handle">{handle}</h6>
 				</div>
@@ -34,7 +35,7 @@ const ContactCard = ({ handle, label, url = '' }) => {
 					{renderIcon()}
 					<p>{label}</p>
 				</div>
-			</div>
+			</motion.div>
 		</div>
 	);
 };
