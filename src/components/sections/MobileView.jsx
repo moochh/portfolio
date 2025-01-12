@@ -13,6 +13,7 @@ const MobileView = () => {
 
 			<p>
 				To get the best experience, please view this website on a larger screen.
+				☺
 			</p>
 		</div>
 	);
