@@ -158,10 +158,10 @@ html,
 }
 .mobile-view svg {
   fill: white;
-  width: 48px;
+  width: 36px;
 }
 .mobile-view p {
-  font-size: 24px;
+  font-size: 16px;
   font-family: "medium";
   color: white;
   text-align: center;
