@@ -132,6 +132,11 @@ html,
   scrollbar-width: none;
 }
 
+@media (max-width: 768px) {
+  #root {
+    display: none !important;
+  }
+}
 .center-h {
   display: flex;
   flex-direction: row;
