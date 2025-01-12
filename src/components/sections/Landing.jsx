@@ -31,21 +31,6 @@ const Landing = () => {
 		return () => clearTimeout(timeout);
 	}, [visibleChars, isDeleting, title]);
 
-	//> Disable/Re-enable scrolling
-	useEffect(() => {
-		// Disable scroll on page load
-		document.body.style.overflow = 'hidden';
-
-		// Re-enable scroll after 3 seconds
-		const timer = setTimeout(() => {
-			document.body.style.overflow = 'auto';
-			setIsPageReady(true);
-		}, 3000);
-
-		// Cleanup function to avoid memory leaks
-		return () => clearTimeout(timer);
-	}, []);
-
 	return (
 		<section className="landing center-v">
 			<div className="content center-v">

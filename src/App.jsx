@@ -38,6 +38,43 @@ function App() {
 		}, 1000);
 	};
 
+	//> Force scroll to top on page load
+	useEffect(() => {
+		window.scrollTo({ top: 0, behavior: 'auto' });
+	}, []);
+
+	//> Disable/Re-enable scrolling
+	useEffect(() => {
+		// Function to prevent scrolling
+		const preventScroll = (e) => {
+			e.preventDefault();
+			e.stopPropagation();
+		};
+
+		// Add event listeners to disable scrolling
+		window.addEventListener('wheel', preventScroll, { passive: false });
+		window.addEventListener('touchmove', preventScroll, { passive: false });
+		window.addEventListener('keydown', preventScroll, { passive: false });
+
+		// Re-enable scroll after 3 seconds
+		const timer = setTimeout(() => {
+			// Remove event listeners to re-enable scroll
+			window.removeEventListener('wheel', preventScroll);
+			window.removeEventListener('touchmove', preventScroll);
+			window.removeEventListener('keydown', preventScroll);
+
+			setIsPageReady(true);
+		}, 3000);
+
+		// Cleanup function to remove listeners when the component unmounts
+		return () => {
+			clearTimeout(timer);
+			window.removeEventListener('wheel', preventScroll);
+			window.removeEventListener('touchmove', preventScroll);
+			window.removeEventListener('keydown', preventScroll);
+		};
+	}, []);
+
 	return (
 		<div className="main">
 			<Landing />

@@ -48,6 +48,10 @@ section.contact {
 					z-index: 1;
 					transform: translateY(var(--card-spacing));
 
+					.card {
+						z-index: 1;
+					}
+
 					&:hover {
 						& ~ #email-card {
 							transform: translateY(
@@ -81,6 +85,10 @@ section.contact {
 				&:nth-child(2) {
 					z-index: 2;
 
+					.card {
+						z-index: 2;
+					}
+
 					&:hover {
 						& ~ #email-card {
 							transform: translateY(
@@ -109,6 +117,10 @@ section.contact {
 				&:nth-child(3) {
 					z-index: 3;
 					transform: translateY(calc(var(--card-spacing) * -1));
+
+					.card {
+						z-index: 3;
+					}
 
 					&:hover {
 						.card {
@@ -148,7 +160,7 @@ section.contact {
 				justify-content: space-between;
 				padding: calc(var(--card-padding) / 1.5) var(--card-padding);
 				border-radius: var(--card-corner);
-				background-color: #14141480;
+				background-color: rgba(20, 20, 20, 0.502);
 				backdrop-filter: blur(12px);
 				border: 1px solid var(--border);
 				width: 360px;
@@ -159,6 +171,7 @@ section.contact {
 				box-shadow: 0 20px 32px rgba(0, 0, 0, 0.5);
 				transition: all 0.3s ease-in-out;
 
+				position: relative;
 				& * {
 					transition: all 0.6s ease-in-out;
 				}
@@ -172,6 +185,7 @@ section.contact {
 						color: var(--light-gray);
 						font-size: 20px;
 						font-family: 'semibold';
+						opacity: 0.3;
 					}
 				}
 
@@ -190,6 +204,12 @@ section.contact {
 						text-transform: uppercase;
 						font-family: 'medium';
 						font-size: 14px;
+					}
+				}
+
+				&:hover {
+					.handle {
+						opacity: 1;
 					}
 				}
 			}

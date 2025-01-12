@@ -37,6 +37,7 @@ footer {
 			font-family: 'semibold';
 			text-transform: uppercase;
 			line-height: 0.85em;
+			cursor: pointer;
 		}
 
 		.container {
@@ -76,6 +77,37 @@ footer {
 			}
 
 			.sitemap {
+			}
+		}
+	}
+}
+
+.contact {
+	button {
+		display: flex;
+		align-items: center;
+		gap: 8px;
+
+		svg {
+			width: 18px;
+			fill: var(--light-gray);
+			transition: 0.3s ease-out;
+		}
+
+		p {
+			font-family: 'medium';
+			font-size: 14px;
+			color: var(--light-gray);
+			transition: 0.3s ease-out;
+
+			&:hover {
+				color: white;
+			}
+		}
+
+		&:hover {
+			svg {
+				fill: white;
 			}
 		}
 	}

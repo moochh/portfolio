@@ -55,6 +55,7 @@ section.landing {
 .landing {
 	animation: mainParentAnimation 3s ease-in-out forwards;
 	max-height: 100vh;
+	height: fit-content;
 }
 
 .landing .name {

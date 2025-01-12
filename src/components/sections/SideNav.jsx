@@ -18,7 +18,7 @@ const SideNav = () => {
 			//> Set side nav visibility
 
 			setIsSideNavVisible(
-				scrollPosition >= 350 &&
+				scrollPosition >= 300 &&
 					window.innerHeight + window.scrollY <
 						document.documentElement.scrollHeight - 100
 			);

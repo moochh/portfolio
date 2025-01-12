@@ -64,11 +64,11 @@
 
 html {
   scroll-behavior: smooth;
+  overflow-x: hidden;
 }
 
 body {
   background-color: var(--black);
-  overflow-x: hidden;
 }
 
 p,
@@ -87,13 +87,14 @@ h6 {
   flex-direction: column;
   align-items: center;
   interpolate-size: allow-keywords;
+  overflow-x: hidden;
 }
 
 .main {
   width: 100vw;
   display: flex;
   flex-direction: column;
-  align-items: center;
+  scrollbar-width: 0;
 }
 
 button {
@@ -104,6 +105,30 @@ button {
   font: inherit;
   cursor: pointer;
   outline: inherit;
+}
+button:focus {
+  outline: none;
+  border: none;
+}
+
+::-webkit-scrollbar {
+  display: none;
+  width: 0;
+  height: 0;
+}
+
+::-webkit-scrollbar-thumb {
+  background: transparent; /* Hides the scrollbar thumb */
+}
+
+::-webkit-scrollbar-track {
+  background: transparent; /* Hides the scrollbar track */
+}
+
+body,
+html,
+#root {
+  scrollbar-width: none;
 }
 
 .center-h {
@@ -585,6 +610,8 @@ section.landing img {
 .landing {
   animation: mainParentAnimation 3s ease-in-out forwards;
   max-height: 100vh;
+  height: -moz-fit-content;
+  height: fit-content;
 }
 
 .landing .name {
@@ -1060,6 +1087,9 @@ section.contact .content .stack .container:nth-child(1) {
   z-index: 1;
   transform: translateY(var(--card-spacing));
 }
+section.contact .content .stack .container:nth-child(1) .card {
+  z-index: 1;
+}
 section.contact .content .stack .container:nth-child(1):hover ~ #email-card {
   transform: translateY(calc(var(--card-spacing) * -1 - (var(--hover-spacing))));
 }
@@ -1081,6 +1111,9 @@ section.contact .content .stack .container:nth-child(1):hover .card .label p {
 section.contact .content .stack .container:nth-child(2) {
   z-index: 2;
 }
+section.contact .content .stack .container:nth-child(2) .card {
+  z-index: 2;
+}
 section.contact .content .stack .container:nth-child(2):hover ~ #email-card {
   transform: translateY(calc(var(--card-spacing) * -1 - var(--hover-spacing)));
 }
@@ -1098,6 +1131,9 @@ section.contact .content .stack .container:nth-child(2):hover .label p {
 section.contact .content .stack .container:nth-child(3) {
   z-index: 3;
   transform: translateY(calc(var(--card-spacing) * -1));
+}
+section.contact .content .stack .container:nth-child(3) .card {
+  z-index: 3;
 }
 section.contact .content .stack .container:nth-child(3):hover .card {
   box-shadow: 0 0 48px rgba(255, 166, 0, 0.4);
@@ -1122,7 +1158,7 @@ section.contact .content .stack .card {
   justify-content: space-between;
   padding: calc(var(--card-padding) / 1.5) var(--card-padding);
   border-radius: var(--card-corner);
-  background-color: rgba(20, 20, 20, 0.5019607843);
+  background-color: rgba(20, 20, 20, 0.502);
   -webkit-backdrop-filter: blur(12px);
           backdrop-filter: blur(12px);
   border: 1px solid var(--border);
@@ -1133,6 +1169,7 @@ section.contact .content .stack .card {
   gap: 4px;
   box-shadow: 0 20px 32px rgba(0, 0, 0, 0.5);
   transition: all 0.3s ease-in-out;
+  position: relative;
 }
 section.contact .content .stack .card * {
   transition: all 0.6s ease-in-out;
@@ -1146,6 +1183,7 @@ section.contact .content .stack .card .handle-container .handle {
   color: var(--light-gray);
   font-size: 20px;
   font-family: "semibold";
+  opacity: 0.3;
 }
 section.contact .content .stack .card .label {
   display: flex;
@@ -1161,6 +1199,9 @@ section.contact .content .stack .card .label p {
   text-transform: uppercase;
   font-family: "medium";
   font-size: 14px;
+}
+section.contact .content .stack .card:hover .handle {
+  opacity: 1;
 }
 
 footer {
@@ -1195,6 +1236,7 @@ footer .content h1 {
   font-family: "semibold";
   text-transform: uppercase;
   line-height: 0.85em;
+  cursor: pointer;
 }
 footer .content .container {
   display: flex;
@@ -1227,4 +1269,26 @@ footer .content .container > div .label {
 }
 footer .content .container > div button {
   color: var(--light-gray);
+}
+.contact button {
+  display: flex;
+  align-items: center;
+  gap: 8px;
+}
+.contact button svg {
+  width: 18px;
+  fill: var(--light-gray);
+  transition: 0.3s ease-out;
+}
+.contact button p {
+  font-family: "medium";
+  font-size: 14px;
+  color: var(--light-gray);
+  transition: 0.3s ease-out;
+}
+.contact button p:hover {
+  color: white;
+}
+.contact button:hover svg {
+  fill: white;
 }/*# sourceMappingURL=style.css.map */

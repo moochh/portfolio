@@ -14,6 +14,10 @@ const Nav = () => {
 		});
 	};
 
+	const scrollToTop = () => {
+		window.scrollTo({ top: 0, behavior: 'smooth' });
+	};
+
 	return (
 		<motion.div
 			className="top-nav"
@@ -24,7 +28,9 @@ const Nav = () => {
 					: {}
 			}
 			transition={{ duration: 1, ease: 'easeInOut' }}>
-			<h6 className="name">Jay Rome Rana.</h6>
+			<h6 className="name" onClick={scrollToTop}>
+				Jay Rome Rana.
+			</h6>
 
 			<button className="connect" onClick={handleClick}>
 				<p>Connect with me</p>
