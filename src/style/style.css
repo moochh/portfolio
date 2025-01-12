@@ -133,10 +133,40 @@ html,
 }
 
 @media (max-width: 768px) {
-  #root {
-    display: none !important;
+  .main {
+    display: none;
+  }
+  .mobile-view {
+    display: flex !important;
   }
 }
+.mobile-view {
+  position: fixed;
+  height: 100vh;
+  width: 100vw;
+  background-color: var(--black);
+  display: none;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  gap: 16px;
+  z-index: 50;
+  padding: 24px;
+  left: 50%;
+  top: 50%;
+  transform: translate(-50%, -50%);
+}
+.mobile-view svg {
+  fill: white;
+  width: 48px;
+}
+.mobile-view p {
+  font-size: 24px;
+  font-family: "medium";
+  color: white;
+  text-align: center;
+}
+
 .center-h {
   display: flex;
   flex-direction: row;

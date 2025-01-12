@@ -18,6 +18,7 @@ import MedPalModal from './components/projects/MedPalModal';
 import RefurbModal from './components/projects/RefurbModal';
 import Nav from './components/sections/Nav';
 import SideNav from './components/sections/SideNav';
+import MobileView from './components/sections/MobileView';
 
 function App() {
 	const [toggled, setToggled] = useState('');
@@ -76,26 +77,30 @@ function App() {
 	}, []);
 
 	return (
-		<div className="main">
-			<Landing />
+		<>
+			<MobileView />
 
-			<Nav />
+			<div className="main">
+				<Landing />
 
-			<About />
-			<Skills />
+				<Nav />
 
-			<Projects onClick={handleModalClick} />
-			<FareEaseModal show={showMask && selectedProject === 'FareEase'} />
-			<MedPalModal show={showMask && selectedProject === 'MedPal'} />
-			<RefurbModal show={showMask && selectedProject === 'Refurb'} />
+				<About />
+				<Skills />
 
-			<Mask show={showMask} />
+				<Projects onClick={handleModalClick} />
+				<FareEaseModal show={showMask && selectedProject === 'FareEase'} />
+				<MedPalModal show={showMask && selectedProject === 'MedPal'} />
+				<RefurbModal show={showMask && selectedProject === 'Refurb'} />
 
-			<Contact />
-			<Footer />
+				<Mask show={showMask} />
 
-			<SideNav />
-		</div>
+				<Contact />
+				<Footer />
+
+				<SideNav />
+			</div>
+		</>
 	);
 }
 
