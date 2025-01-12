@@ -2,4 +2,8 @@ section {
 	width: 100%;
 	padding: 0 var(--page-padding);
 	max-width: var(--page-width);
+
+	.section-label {
+		padding-top: var(--section-spacing);
+	}
 }

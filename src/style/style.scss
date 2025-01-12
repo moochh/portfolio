@@ -6,11 +6,15 @@
 	margin: 0;
 	padding: 0;
 	box-sizing: border-box;
-	transition: 0.3s ease-in-out;
+}
+
+html {
+	scroll-behavior: smooth;
 }
 
 body {
 	background-color: var(--black);
+	overflow-x: hidden;
 }
 
 p,
@@ -28,6 +32,7 @@ h6 {
 	display: flex;
 	flex-direction: column;
 	align-items: center;
+	interpolate-size: allow-keywords;
 }
 
 .main {
@@ -52,9 +57,12 @@ button {
 
 @import './components/text';
 @import './components/button';
+@import './components/modal';
 
+@import './sections/nav';
 @import './sections/landing';
 @import './sections/about';
 @import './sections/skills';
+@import './sections/projects';
 @import './sections/contact';
 @import './sections/footer';

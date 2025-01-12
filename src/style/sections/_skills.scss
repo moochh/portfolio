@@ -21,7 +21,6 @@ section.skills {
 				z-index: 1;
 
 				.card {
-					flex: 1;
 					border-radius: var(--card-corner);
 					background: var(--card-gradient);
 					background-color: white;
@@ -30,6 +29,7 @@ section.skills {
 					display: flex;
 					padding: var(--card-padding);
 					cursor: pointer;
+					min-width: calc(104px + (calc(var(--card-padding) * 2))) !important;
 
 					&::before {
 						--size: -1px;
@@ -71,12 +71,12 @@ section.skills {
 
 					h6 {
 						font-family: 'medium';
-						font-size: 16px;
 						position: absolute;
 						left: var(--card-padding);
-						top: calc(100%);
+						z-index: 5;
+						top: 100%;
 						transform: translateY(calc(-100% - var(--card-padding)));
-						z-index: 2;
+						font-size: 16px;
 					}
 
 					.content {
@@ -88,7 +88,6 @@ section.skills {
 							font-family: 'medium';
 
 							span {
-								margin-right: 4px;
 								display: inline-block;
 							}
 						}
@@ -97,9 +96,7 @@ section.skills {
 					button {
 						position: absolute;
 						right: var(--card-padding);
-						top: calc(100%);
-						transform: translateY(calc(-100% - var(--card-padding)));
-						z-index: 2;
+						z-index: 5;
 					}
 				}
 			}
@@ -125,86 +122,61 @@ section.skills {
 // SKILLS
 .skill-ui {
 	img {
-		width: 135%;
+		width: 485px;
 		left: -52px;
 		top: 50%;
-		transform: translate(0, -50%);
+	}
+
+	.content {
+		width: 40%;
 	}
 }
 
 .skill-web {
 	img {
+		width: 234px;
 		left: 50%;
 		top: 50%;
-		width: 65%;
-		transform: translate(-50%, -50%);
+	}
+
+	.content {
+		width: 45%;
+		right: var(--card-padding);
+
+		.highlight {
+			display: block !important;
+			color: var(--light-gray);
+			font-family: 'regular';
+			font-size: 14px;
+			margin-bottom: 8px;
+
+			&.back {
+				margin-top: 36px;
+			}
+		}
 	}
 }
 
 .skill-mobile {
 	img {
+		width: 378px;
 		left: 50%;
 		top: 50%;
-		width: 105%;
-		transform: translate(-55%, -50%);
+	}
+
+	.content {
+		width: 45%;
 	}
 }
 
-// Hover
-.skills {
-	.technical {
-		.container {
-			.card {
-				--scale: 1.1;
-
-				&.skill-ui:hover {
-					img {
-						transform: translate(0, -50%) scale(var(--scale));
-					}
-				}
-
-				&.skill-web:hover {
-					img {
-						transform: translate(-50%, -50%) scale(var(--scale));
-					}
-				}
-
-				&.skill-mobile:hover {
-					img {
-						transform: translate(-55%, -50%) scale(var(--scale));
-					}
-				}
-			}
-		}
-	}
-}
-
-// Show
-.skills {
-	.technical {
-		.container {
-			.card {
-				&.skill-ui {
-					& * {
-						transition: all 0.5s ease-in-out;
-					}
-
-					&.show {
-						flex: 100;
-
-						h6 {
-							font-size: 24px;
-							top: var(--card-padding);
-							transform: translateY(0);
-						}
-
-						button {
-							top: var(--card-padding);
-							transform: translateY(0);
-						}
-					}
-				}
-			}
-		}
-	}
+.highlight-glow {
+	position: absolute;
+	width: 500px;
+	height: 100px;
+	background-color: var(--primary);
+	z-index: 0;
+	border-radius: 100%;
+	left: 50%;
+	bottom: 0;
+	filter: blur(64px);
 }

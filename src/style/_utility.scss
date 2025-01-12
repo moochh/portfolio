@@ -16,6 +16,8 @@
 	width: 100%;
 	padding: var(--section-spacing) var(--page-padding);
 	display: flex;
+	max-width: var(--page-width);
+	padding-bottom: 0;
 
 	span {
 		height: 1px;

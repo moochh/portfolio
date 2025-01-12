@@ -3,7 +3,7 @@ import Email from './icons/Email';
 import LinkedIn from './icons/LinkedIn';
 import Instagram from './icons/Instagram';
 
-const ContactCard = ({ handle, label }) => {
+const ContactCard = ({ handle, label, url = '' }) => {
 	const renderIcon = () => {
 		switch (label) {
 			case 'email':
@@ -15,8 +15,16 @@ const ContactCard = ({ handle, label }) => {
 		}
 	};
 
+	const handleClick = () => {
+		if (label === 'email') {
+			window.location.href = `mailto:${handle}`;
+		} else {
+			window.open(url, '_blank');
+		}
+	};
+
 	return (
-		<div className="container" id={`${label}-card`}>
+		<div className="container" id={`${label}-card`} onClick={handleClick}>
 			<div className="card">
 				<div className="handle-container">
 					<h6 className="handle">{handle}</h6>
