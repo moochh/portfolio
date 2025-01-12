@@ -52,12 +52,12 @@ const SideNav = () => {
 			className="side-nav-wrapper"
 			initial={{ opacity: 0, filter: 'blur(24px)' }}
 			animate={isSideNavVisible ? { opacity: 1, filter: 'blur(0)' } : {}}
-			transition={{ duration: 0.5, ease: 'easeInOut' }}>
+			transition={{ duration: 0.3, ease: 'easeInOut' }}>
 			<motion.div
 				className="side-nav"
 				initial={{ pointerEvents: 'none' }}
 				animate={isSideNavVisible ? { pointerEvents: 'all' } : {}}
-				transition={{ duration: 0.5, ease: 'easeInOut' }}>
+				transition={{ duration: 0.3, ease: 'easeInOut' }}>
 				<SideNavItem section="About" />
 				<SideNavItem section="Skills" />
 				<SideNavItem section="Projects" />

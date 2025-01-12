@@ -1,16 +1,19 @@
-import React, { useRef } from 'react';
+import React, { useRef, useEffect } from 'react';
 import { motion, useInView } from 'motion/react';
 import { useGlobalState } from '../../context/GlobalStateProvider';
 
 const Info = ({ project, header, children }) => {
 	const ref = useRef(null);
 	const { isReadyModal } = useGlobalState();
-	const { selectedProject } = useGlobalState();
 
 	const isInView = useInView(ref, {
 		margin: '0px 0px -100px 0px',
 		once: true
 	});
+
+	useEffect(() => {
+		console.log(isInView, isReadyModal);
+	}, [isInView, isReadyModal]);
 
 	return (
 		<div className="info">
