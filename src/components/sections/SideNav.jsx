@@ -32,7 +32,7 @@ const SideNav = () => {
 
 				const sectionTop = section.getBoundingClientRect().top + window.scrollY;
 
-				if (scrollPosition >= sectionTop - 75) {
+				if (scrollPosition >= sectionTop - 50) {
 					passedSection = key.replace('Ref', '');
 				}
 			}

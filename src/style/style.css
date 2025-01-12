@@ -658,11 +658,13 @@ section.landing img {
   font-size: 100px;
   animation: nameParentAnimation 3s ease-in-out forwards;
   font-family: "semibold";
+  color: var(--primary);
 }
 .landing .name h1 {
   display: inline-block;
   margin-right: 0.2em;
   animation: nameAnimation 3s ease-in-out forwards;
+  color: inherit;
   opacity: 0;
   filter: blur(24px);
   transform: translateY(100px);
@@ -721,9 +723,11 @@ section.landing img {
 @keyframes nameParentAnimation {
   65% {
     font-size: 100px;
+    color: var(--primary);
   }
   100% {
     font-size: 52px;
+    color: white;
   }
 }
 @keyframes greetingAnimation {
