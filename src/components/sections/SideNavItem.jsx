@@ -5,6 +5,7 @@ import { useGlobalState } from '../../context/GlobalStateProvider';
 const SideNavItem = ({ section }) => {
 	const { currentSection, sectionRefs } = useGlobalState();
 	const [color, setColor] = useState('#ffffff');
+	const [isHovered, setIsHovered] = useState(false);
 
 	const sections = ['About', 'Skills', 'Projects', 'Contact'];
 
@@ -43,13 +44,21 @@ const SideNavItem = ({ section }) => {
 		});
 	};
 
+	const handleMouseEnter = () => setIsHovered(true);
+	const handleMouseLeave = () => setIsHovered(false);
+
 	return (
-		<button onClick={handleClick}>
+		<motion.button
+			onClick={handleClick}
+			onMouseEnter={handleMouseEnter}
+			onMouseLeave={handleMouseLeave}>
 			<motion.span
 				initial={{ backgroundColor: 'var(--light-gray)', height: '1px' }}
 				animate={
 					currentSection === section
 						? { backgroundColor: 'var(--primary)', height: '2px' }
+						: isHovered && currentSection !== section
+						? { backgroundColor: '#ffffff', height: '1px' }
 						: { backgroundColor: color, height: '1px' }
 				}
 				transition={{ duration: 0.3, ease: 'easeInOut' }}></motion.span>
@@ -59,12 +68,14 @@ const SideNavItem = ({ section }) => {
 				animate={
 					currentSection === section
 						? { color: 'var(--primary)' }
+						: isHovered && currentSection !== section
+						? { color: '#ffffff' }
 						: { color: color }
 				}
 				transition={{ duration: 0.3, ease: 'easeInOut' }}>
 				{section}
 			</motion.p>
-		</button>
+		</motion.button>
 	);
 };
 
