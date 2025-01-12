@@ -54,13 +54,12 @@ section.landing {
 
 .landing {
 	animation: mainParentAnimation 3s ease-in-out forwards;
-	max-height: 100vh;
 	height: fit-content;
 }
 
 .landing .name {
 	margin-bottom: 12px;
-	font-size: 148px;
+	font-size: 100px;
 	animation: nameParentAnimation 3s ease-in-out forwards;
 	font-family: 'semibold';
 
@@ -87,7 +86,7 @@ section.landing {
 }
 
 .landing .greeting {
-	font-size: 148px;
+	font-size: 100px;
 	animation: greetingParentAnimation 3s ease-in-out forwards;
 	color: white;
 	font-family: 'medium';
@@ -137,7 +136,7 @@ section.landing {
 
 @keyframes nameParentAnimation {
 	65% {
-		font-size: 148px;
+		font-size: 100px;
 	}
 
 	100% {
@@ -173,7 +172,7 @@ section.landing {
 
 @keyframes greetingParentAnimation {
 	65% {
-		font-size: 148px;
+		font-size: 100px;
 		color: white;
 	}
 

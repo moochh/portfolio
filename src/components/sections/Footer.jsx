@@ -24,6 +24,10 @@ const Footer = () => {
 		navigator.clipboard.writeText(text);
 	};
 
+	const openEmail = () => {
+		window.location.href = 'mailto:rana.jay.rome@gmail.com';
+	};
+
 	return (
 		<motion.footer
 			initial={{ opacity: 0, filter: 'blur(24px)' }}
@@ -48,9 +52,12 @@ const Footer = () => {
 						<p className="label">Contact</p>
 
 						<button onClick={() => copyToClipboard('rana.jay.rome@gmail.com')}>
-							<p>Email</p>
+							<p onClick={openEmail}>Email</p>
 
-							<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 100 100">
+							<svg
+								xmlns="http://www.w3.org/2000/svg"
+								viewBox="0 0 100 100"
+								onClick={() => copyToClipboard('rana.jay.rome@gmail.com')}>
 								<g id="Card_Stack" data-name="Card Stack">
 									<path d="M19.41,4.23H58.32A10.43,10.43,0,0,1,68.73,14.64v7.7H80.59A10.43,10.43,0,0,1,91,32.75V85.36A10.43,10.43,0,0,1,80.59,95.77H41.68A10.43,10.43,0,0,1,31.27,85.36v-7.7H19.41A10.43,10.43,0,0,1,9,67.25V14.64A10.43,10.43,0,0,1,19.41,4.23ZM68.73,28.47V67.25A10.43,10.43,0,0,1,58.32,77.66H37.41v7.7a4.28,4.28,0,0,0,4.27,4.28H80.59a4.28,4.28,0,0,0,4.27-4.28V32.75a4.28,4.28,0,0,0-4.27-4.28ZM58.32,10.36H19.41a4.28,4.28,0,0,0-4.27,4.28V67.25a4.28,4.28,0,0,0,4.27,4.28H58.32a4.3,4.3,0,0,0,4.27-4.28V14.64a4.3,4.3,0,0,0-4.27-4.28Z" />
 								</g>

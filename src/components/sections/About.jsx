@@ -20,6 +20,10 @@ const About = () => {
 				<div className="content">
 					<div className="illustration">
 						<img src="/assets/illustrations/person.png" />
+						<img
+							src="/assets/illustrations/person outline 2px.png"
+							className="outline"
+						/>
 						<div className="card"></div>
 					</div>
 

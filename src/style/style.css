@@ -574,7 +574,7 @@ button.circle-icon svg {
 .side-nav-wrapper .side-nav {
   display: flex;
   flex-direction: column;
-  gap: 20px;
+  gap: 12px;
   width: var(--page-padding);
   padding-left: 40px;
 }
@@ -584,6 +584,10 @@ button.circle-icon svg {
   align-items: center;
   cursor: pointer;
   pointer-events: inherit;
+  width: -moz-fit-content;
+  width: fit-content;
+  padding: 4px 0;
+  padding-right: 24px;
 }
 .side-nav-wrapper .side-nav button span {
   height: 1px;
@@ -645,14 +649,13 @@ section.landing img {
 
 .landing {
   animation: mainParentAnimation 3s ease-in-out forwards;
-  max-height: 100vh;
   height: -moz-fit-content;
   height: fit-content;
 }
 
 .landing .name {
   margin-bottom: 12px;
-  font-size: 148px;
+  font-size: 100px;
   animation: nameParentAnimation 3s ease-in-out forwards;
   font-family: "semibold";
 }
@@ -674,7 +677,7 @@ section.landing img {
 }
 
 .landing .greeting {
-  font-size: 148px;
+  font-size: 100px;
   animation: greetingParentAnimation 3s ease-in-out forwards;
   color: white;
   font-family: "medium";
@@ -717,7 +720,7 @@ section.landing img {
 }
 @keyframes nameParentAnimation {
   65% {
-    font-size: 148px;
+    font-size: 100px;
   }
   100% {
     font-size: 52px;
@@ -747,7 +750,7 @@ section.landing img {
 }
 @keyframes greetingParentAnimation {
   65% {
-    font-size: 148px;
+    font-size: 100px;
     color: white;
   }
   100% {
@@ -766,9 +769,6 @@ section.landing img {
   }
 }
 @keyframes mainParentAnimation {}
-section.about {
-  margin-top: 48px;
-}
 section.about .content {
   display: flex;
   gap: 64px;
@@ -785,12 +785,17 @@ section.about .content .illustration .card {
   background-color: var(--card-bg);
   border: 1px solid var(--border);
   border-radius: var(--card-corner);
+  z-index: 2;
 }
 section.about .content .illustration img {
   position: absolute;
   height: calc(100% + 100px);
   bottom: 0;
   left: 30%;
+  z-index: 3;
+}
+section.about .content .illustration img.outline {
+  z-index: 1;
 }
 section.about .content .message h6 {
   text-transform: uppercase;
@@ -1316,6 +1321,9 @@ footer .content .container > div button {
   fill: var(--light-gray);
   transition: 0.3s ease-out;
 }
+.contact button svg:hover {
+  fill: white;
+}
 .contact button p {
   font-family: "medium";
   font-size: 14px;
@@ -1324,7 +1332,4 @@ footer .content .container > div button {
 }
 .contact button p:hover {
   color: white;
-}
-.contact button:hover svg {
-  fill: white;
 }/*# sourceMappingURL=style.css.map */

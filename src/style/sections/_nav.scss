@@ -90,7 +90,7 @@
 	.side-nav {
 		display: flex;
 		flex-direction: column;
-		gap: 20px;
+		gap: 12px;
 		width: var(--page-padding);
 		padding-left: 40px;
 
@@ -100,6 +100,10 @@
 			align-items: center;
 			cursor: pointer;
 			pointer-events: inherit;
+			width: fit-content;
+			padding: 4px 0;
+
+			padding-right: 24px;
 
 			span {
 				height: 1px;

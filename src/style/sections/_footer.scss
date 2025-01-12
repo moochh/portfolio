@@ -92,6 +92,10 @@ footer {
 			width: 18px;
 			fill: var(--light-gray);
 			transition: 0.3s ease-out;
+
+			&:hover {
+				fill: white;
+			}
 		}
 
 		p {
@@ -102,12 +106,6 @@ footer {
 
 			&:hover {
 				color: white;
-			}
-		}
-
-		&:hover {
-			svg {
-				fill: white;
 			}
 		}
 	}
