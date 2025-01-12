@@ -73,6 +73,12 @@ const Landing = () => {
 									{char}
 								</motion.span>
 							))}
+
+							<span
+								className="cursor"
+								style={{ color: colors[titleCounter % colors.length] }}>
+								|
+							</span>
 						</h1>
 						<span></span>
 					</motion.div>

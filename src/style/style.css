@@ -616,6 +616,7 @@ section.landing .content .inline .highlight-container {
   display: inline;
   position: relative;
   margin: 0 12px;
+  margin-right: 4px;
 }
 section.landing .content .inline .highlight-container .highlight {
   color: var(--primary);
@@ -624,13 +625,17 @@ section.landing .content .inline .highlight-container .highlight {
 section.landing .content .inline .highlight-container .highlight span {
   opacity: 1;
 }
+section.landing .content .inline .highlight-container .highlight .cursor {
+  font-family: "bold";
+  animation: blink 1s steps(1, start) infinite;
+}
 section.landing .content .inline .highlight-container > span {
   position: absolute;
-  width: 98%;
+  width: 95%;
   height: 68px;
   left: 50%;
   top: 50%;
-  transform: translate(-50%, calc(-50% - 8px));
+  transform: translate(calc(-50% - 4px), calc(-50% - 8px));
   border: 1px solid rgb(109, 109, 109);
   border-radius: 12px;
 }
@@ -647,6 +652,14 @@ section.landing img {
   pointer-events: none;
 }
 
+@keyframes blink {
+  0%, 100% {
+    opacity: 1;
+  }
+  50% {
+    opacity: 0;
+  }
+}
 .landing {
   animation: mainParentAnimation 3s ease-in-out forwards;
   height: -moz-fit-content;

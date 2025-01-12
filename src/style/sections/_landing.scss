@@ -13,6 +13,7 @@ section.landing {
 				display: inline;
 				position: relative;
 				margin: 0 12px;
+				margin-right: 4px;
 
 				.highlight {
 					color: var(--primary);
@@ -21,15 +22,20 @@ section.landing {
 					span {
 						opacity: 1;
 					}
+
+					.cursor {
+						font-family: 'bold';
+						animation: blink 1s steps(1, start) infinite;
+					}
 				}
 
 				& > span {
 					position: absolute;
-					width: 98%;
+					width: 95%;
 					height: calc(64px + 4px);
 					left: 50%;
 					top: 50%;
-					transform: translate(-50%, calc(-50% - 8px));
+					transform: translate(calc(-50% - 4px), calc(-50% - 8px));
 					border: 1px solid rgb(109, 109, 109);
 					border-radius: 12px;
 				}
@@ -49,6 +55,16 @@ section.landing {
 		margin-top: 28px;
 		opacity: 0;
 		pointer-events: none;
+	}
+}
+
+@keyframes blink {
+	0%,
+	100% {
+		opacity: 1;
+	}
+	50% {
+		opacity: 0;
 	}
 }
 
