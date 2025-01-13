@@ -3,8 +3,8 @@ import { motion, useForceUpdate } from 'motion/react';
 import { useGlobalState } from '../../context/GlobalStateProvider';
 
 const Landing = () => {
-	const [title, setTitle] = useState('developer');
-	const [visibleChars, setVisibleChars] = useState('developer'.length);
+	const [title, setTitle] = useState('######');
+	const [visibleChars, setVisibleChars] = useState('######'.length);
 	const [isDeleting, setIsDeleting] = useState(false);
 	const { setIsPageReady } = useGlobalState();
 
