@@ -26,6 +26,8 @@ section.landing {
 					.cursor {
 						font-family: 'bold';
 						animation: blink 1s steps(1, start) infinite;
+						display: inline-block;
+						white-space: nowrap;
 					}
 				}
 
