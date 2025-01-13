@@ -30,7 +30,7 @@ const RefurbModal = ({ show }) => {
 							<p>Express.js</p>
 							<p>PostgreSQL</p>
 							<p>Firebase</p>
-							<p>PayMongo</p>
+							<p>PayMongo API</p>
 						</TechStack>
 					</Column>
 				</Box>

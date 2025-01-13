@@ -45,7 +45,8 @@ const FareEaseModal = ({ show }) => {
 						<p>Java</p>
 						<p>Javascript</p>
 						<p>Firebase</p>
-						<p>Stripe</p>
+						<p>Stripe API</p>
+						<p>Google Maps API</p>
 					</TechStack>
 				</Box>
 			</Row>
