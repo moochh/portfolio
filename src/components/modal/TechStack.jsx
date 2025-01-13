@@ -32,7 +32,7 @@ const TechStack = ({ isBottom, children }) => {
 							: {}
 					}
 					transition={{ duration: 0.5 }}>
-					TechStack
+					Tech Stack
 				</motion.h6>
 
 				{React.Children.map(children, (child, index) => (
