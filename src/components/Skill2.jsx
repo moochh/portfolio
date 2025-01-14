@@ -45,7 +45,7 @@ function Skill2() {
 	}, [toggled]);
 
 	const message =
-		'{Front-End} The frameworks/libraries I use for building the front end is ReactJS and C# Blazor. {Back-End} In building web-based servers, I use Express.js.';
+		'{Front-End} The frameworks/libraries I use for building the front end are ReactJS and C# Blazor. {Back-End} In building web-based servers, I use Express.js.';
 
 	const handleMouseEnter = () => setIsHovered(true);
 	const handleMouseLeave = () => setIsHovered(false);
