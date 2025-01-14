@@ -1284,12 +1284,33 @@ footer .content {
   align-items: end;
   justify-content: space-between;
 }
-footer .content h1 {
+footer .content .name-container {
+  width: -moz-fit-content;
+  width: fit-content;
+  display: flex;
+  flex-direction: column;
+  align-items: end;
+  gap: 8px;
+}
+footer .content .name-container h1 {
   font-size: 160px;
   font-family: "semibold";
   text-transform: uppercase;
   line-height: 0.85em;
   cursor: pointer;
+}
+footer .content .name-container p {
+  color: var(--light-gray);
+  font-family: "medium";
+  font-size: 14px;
+}
+footer .content .name-container p a {
+  color: inherit;
+  text-decoration: underline;
+  transition: 0.3s ease-out;
+}
+footer .content .name-container p a:hover {
+  color: white;
 }
 footer .content .container {
   display: flex;

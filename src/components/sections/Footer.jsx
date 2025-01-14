@@ -36,7 +36,13 @@ const Footer = () => {
 			<span></span>
 
 			<div className="content">
-				<h1 onClick={scrollToTop}>Jay Rome.</h1>
+				<div className="name-container">
+					<h1 onClick={scrollToTop}>Jay Rome.</h1>
+					<p>
+						Built with <a href="https://react.dev/">React</a> and{' '}
+						<a href="https://motion.dev/">Framer Motion</a>
+					</p>
+				</div>
 
 				<div className="container">
 					<div className="sitemap">
