@@ -40,7 +40,7 @@ const Footer = () => {
 					<h1 onClick={scrollToTop}>Jay Rome.</h1>
 					<p>
 						Built with <a href="https://react.dev/">React</a> and{' '}
-						<a href="https://motion.dev/">Framer Motion</a>
+						<a href="https://motion.dev/">Motion</a>
 					</p>
 				</div>
 
