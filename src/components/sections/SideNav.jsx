@@ -20,7 +20,7 @@ const SideNav = () => {
 			setIsSideNavVisible(
 				scrollPosition >= 300 &&
 					window.innerHeight + window.scrollY <
-						document.documentElement.scrollHeight
+						document.documentElement.scrollHeight - 50
 			);
 
 			//> Set current section
