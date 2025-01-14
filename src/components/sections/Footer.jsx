@@ -39,8 +39,14 @@ const Footer = () => {
 				<div className="name-container">
 					<h1 onClick={scrollToTop}>Jay Rome.</h1>
 					<p>
-						Built with <a href="https://react.dev/">React</a> and{' '}
-						<a href="https://motion.dev/">Motion</a>
+						Built with{' '}
+						<a href="https://react.dev/" target="_blank">
+							React
+						</a>{' '}
+						and{' '}
+						<a href="https://motion.dev/" target="_blank">
+							Motion
+						</a>
 					</p>
 				</div>
 
