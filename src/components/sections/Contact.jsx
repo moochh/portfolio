@@ -33,9 +33,9 @@ const Contact = () => {
 						url="https://www.instagram.com/_moochhh_"
 					/>
 					<ContactCard
-						handle="/jay-rome-rana-268a0a345"
+						handle="/jay-rome-rana"
 						label="linkedin"
-						url="https://www.linkedin.com/in/jay-rome-rana-268a0a345/"
+						url="https://www.linkedin.com/in/jay-rome-rana/"
 					/>
 					<ContactCard handle="rana.jay.rome@gmail.com" label="email" />
 				</div>
