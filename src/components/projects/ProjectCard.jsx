@@ -2,7 +2,7 @@ import React, { useState } from 'react';
 import { useGlobalState } from '../../context/GlobalStateProvider';
 import { motion } from 'motion/react';
 
-const ProjectCard = ({ position, project, tags, onClick }) => {
+const ProjectCard = ({ position, project, tags, onClick, description }) => {
 	const { selectedProject, setSelectedProject } = useGlobalState();
 	const [isHovered, setIsHovered] = useState(false);
 
@@ -80,8 +80,7 @@ const ProjectCard = ({ position, project, tags, onClick }) => {
 									: {}
 							}
 							transition={{ duration: 0.5, ease: 'easeInOut' }}>
-							FareEase is an automated fare system for bus transportations that
-							utilizes QR code technology.
+							{description}
 						</motion.p>
 
 						<motion.div
